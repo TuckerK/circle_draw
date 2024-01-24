@@ -1,0 +1,35 @@
+canvas{
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    border: 1px solid #d1d1d1;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+
+#rotating-canvas{
+    animation: rotation 2s infinite linear;
+}
+
+#fast-rotating-canvas{
+    animation: rotation 1s infinite linear;
+}
+
+#slow-rotating-canvas{
+    animation: rotation 5s infinite linear;
+}
+
+#stop-rotating-canvas{
+    animation-play-state: paused;
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}   
