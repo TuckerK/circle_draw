@@ -1,94 +1,95 @@
 import React from 'react';
+// import { useState } from 'react';
 import './Toolbar.css';
 
-const Toolbar = ({
-    width,
-    height,
+const Toolbar = ({ width, height }) => {
+
     //function that gives the clear button functionality
-    clearCanvas = () => {
+
+    const clearCanvas = () => {
         const canvas = document.querySelector("canvas");
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-    },
+    };
 
     //function that gives the color buttons functionality
-    colorRed = () => {
+    const colorRed = () => {
         const canvas = document.querySelector("canvas");
         const ctx = canvas.getContext('2d');
         ctx.strokeStyle = "red";
         ctx.fillStyle = "red";
-    },
+    };
 
-    colorBlack = () => {
+    const colorBlack = () => {
         const canvas = document.querySelector("canvas");
         const ctx = canvas.getContext('2d');
         ctx.strokeStyle = "black";
         ctx.fillStyle = "black";
-    },
+    };
 
-    colorGreen = () => {
+    const colorGreen = () => {
         const canvas = document.querySelector("canvas");
         const ctx = canvas.getContext('2d');
         ctx.strokeStyle = "green";
         ctx.fillStyle = "green";
-    },
-    colorBlue = () => {
+    };
+    const colorBlue = () => {
         const canvas = document.querySelector("canvas");
         const ctx = canvas.getContext('2d');
         ctx.strokeStyle = "blue";
         ctx.fillStyle = "blue";
-    },
+    };
+
     //function that adds the rotation to the canvas with css
-    startRotation = () => {
+    const startRotation = () => {
         
         //add the rotating-canvas css id to the canvas
         const canvas = document.querySelector("canvas");
         canvas.id = "rotating-canvas";
 
 
-    },
+    };
     //function that stops rotating the canvas with css
-    stopRotation = () => {
+    const stopRotation = () => {
         //add the stop-rotating-canvas css id to the canvas
         const canvas = document.querySelector("canvas");
         canvas.id = "stop-rotating-canvas";
 
-    },
-    slowRotation = () => {
+    };
+    const slowRotation = () => {
 
         const canvas = document.querySelector("canvas");
         canvas.id = "slow-rotating-canvas";
-    },
-    fastRotation = () => {
+    };
+    const fastRotation = () => {
 
         const canvas = document.querySelector("canvas");
         canvas.id = "fast-rotating-canvas";
-    },
+    };
     //function that gives the small button functionality
-    smallBrush = () => {
+    const smallBrush = () => {
          
-    },
-    mediumBrush = () => {
+    };
+    const mediumBrush = () => {
 
         
         
-    },
-    largeBrush = () => {
+    };
+    const largeBrush = () => {
         
-    },
-    darkMode = () => {
+    };
+    const darkMode = () => {
         const mode = document.querySelector(".canvas-container");
         const tb = document.querySelector(".toolbar");
         tb.id = "dark-mode-tb";
         mode.id = "dark-mode";
-    },
-    lightMode = () => {
+    };
+    const lightMode = () => {
         const mode = document.querySelector(".canvas-container");
         const tb = document.querySelector(".toolbar");
         tb.id = "light-mode-tb";
         mode.id = "light-mode";
-    }
-}) => {
+    };
 
 return(
     <div class="toolbar">
